@@ -1,0 +1,17 @@
+{
+    "name": "Colab Flex",
+    "version": "1.0",
+    "description": "Display Colab Block input and output in columns",
+    "author": "O. Inha",
+    "permissions": ["tabs", "activeTab", "*://colab.research.google.com/*", "file:///*"],
+    "web_accessible_resources": ["colab-flex.css"],
+    "content_scripts": [
+        {
+          "matches": ["*://colab.research.google.com/*", "file:///*"],
+          "js":      ["content_script.js"],
+          "css":     ["colab-flex.css"]
+        }
+    ],
+    "browser_action": {},
+    "manifest_version": 2
+}
